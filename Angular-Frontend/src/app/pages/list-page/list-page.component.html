@@ -1,0 +1,49 @@
+<div class="container">
+<div class="title"> 
+ 
+  
+  My Todos </div>
+ <div class="list-content">
+
+  <div class="btn-section">
+
+    <div class="add-btn" (click)="onCreateClick()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="27" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </svg>
+      
+      add new task
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <!-- Loading state (optional: you can add a spinner here) -->
+  <div *ngIf="isLoading">
+    <!-- Add a loading spinner here if desired -->
+    <mat-spinner></mat-spinner>
+    <h5>Loading tasks...</h5>
+  </div>
+
+  <!-- Show empty list SVG when loading is finished and there are no tasks -->
+  <div class="empty-list" *ngIf="!isLoading && list.length === 0">
+    <img src="assets/svg/Todolist.svg" >
+    <h5>No tasks remaining! Add a task to get started.</h5>
+  </div>
+
+  <!-- Task list section: show tasks only when loading is complete -->
+  <div class="task-list-section" *ngIf="!isLoading && list.length > 0">
+    <app-list [items]="list">
+      <ng-template let-item #itemTemplate>
+        <app-task [task]="item" (taskDeleted)="onTaskDeleted($event)"></app-task>
+      </ng-template>
+    </app-list>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+

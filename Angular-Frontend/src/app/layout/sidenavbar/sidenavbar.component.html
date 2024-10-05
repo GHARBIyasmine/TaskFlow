@@ -1,0 +1,72 @@
+
+
+
+    <div class="sidebar" [ngClass]="{ 'collapsed': isSideBarCollapsed }">
+      <div class="menu-btn" (click)="toggleSidebar()" [innerHTML]="togglebtn">
+              
+      </div>
+
+      <div class="logo-section">
+        <img src="../../../assets/images/done.png" alt="Company Logo" class="logo">
+        <h4 class="gradient-text">TaskFlow</h4>
+      </div>
+
+      
+      
+      <div class="nav bordertop">
+        
+        <div class="menu " >
+          <ul>
+            <li *ngFor="let menu of menus"  >
+              <a 
+              aria-current="page"
+              routerLinkActive="active"
+              [routerLink]="[menu.route]">
+              <span class ="icon" [innerHTML]="menu.icon"></span>
+      
+              <span class="text">{{ menu.text }}</span>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+   
+
+      <!-- second menu -->
+
+      <div class="menu bordertop" >
+        <ul>
+          <li *ngFor="let menu of second_menu"  >
+            <a 
+            aria-current="page"
+            routerLinkActive="active"
+            [routerLink]="[menu.route]">
+            <span class ="icon" [innerHTML]="menu.icon"></span>
+    
+            <span class="text">{{ menu.text }}</span>
+              
+            </a>
+          </li>
+          <li class="logout-btn">
+            <a 
+            (click)="logout()">
+            <span class ="icon" [innerHTML]="logoutButton.icon"></span>
+    
+            <span class="text">{{ logoutButton.text }}</span>
+              
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+
+      
+    </div>
+    
+  
+   
+   

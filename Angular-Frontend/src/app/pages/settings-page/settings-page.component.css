@@ -1,0 +1,54 @@
+.title {
+    font-weight: 500;
+    font-size: 27px;
+    height : 60px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.title, .basic-info, .manage-account {
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid rgba(189, 191, 194, 0.88);
+    margin-bottom: 20px;  
+}
+
+.delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    transition: all 0.3 ease-in-out;
+    color: #BF2828;
+    background-color: #F8E9ED;
+}
+
+.delete-btn:hover{
+    background-color: #f4d8df;
+}
+
+form{
+    display: flex;
+    gap: 20px;
+    
+}
+
+
+mat-form-field {
+    margin: 5px 10px 40px 10px;
+}
+
+button{
+    margin-top: 15px;
+}
+
+.info-section, .manage-section {
+    margin: 30px 0;
+}
+.main-section{
+    margin-top: 60px;
+}

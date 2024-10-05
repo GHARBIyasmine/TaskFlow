@@ -1,0 +1,62 @@
+.title {
+    font-weight: 500;
+    font-size: 27px;
+    height : 60px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid rgba(189, 191, 194, 0.88);
+    margin-bottom: 20px;
+}
+
+.title svg{
+    margin-right: 10px;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 ;
+    
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    transition: all 0.3 ease-in-out;
+}
+
+.add-btn:hover{
+    color : #544DC9;
+    background-color: #E5E4FC;
+}
+
+.task-list-section{
+    margin-top: 25px;
+    padding: 0 60px 0 10px;
+    width: 100%;
+}
+
+.empty-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.empty-list h5{
+    text-align: center;
+}

@@ -1,0 +1,125 @@
+.task-container {
+    display: flex;
+    flex-direction: row;
+   /* background-color: red; */
+   padding: 5px 10px 5px 10px;
+   box-shadow: 0 0 5px rgb(79 101 182 / 40%);
+   border-radius: 8px;
+   
+   transition: all 0.3 ease-in-out;
+   margin: 10px 0;
+
+}
+
+.checked {
+   box-shadow: 0 0 5px rgb(116 181 127 / 40%);
+   border-radius: 8px;
+   
+}
+.textChecked{
+    color: #b0b0b0; /* Lighter text color */
+   text-decoration: line-through; /* Crossed out text */
+}
+
+.checkbox {
+   
+    flex: 1;
+    white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+
+
+}
+.toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width :66px
+}
+
+
+.task-description-section{
+    width: 100%S;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  height: 60px;
+  padding: 0 5px;
+  font-weight: 500; 
+  font-size: 16px; 
+  line-height: 1.2; 
+}
+
+.task-info-section{
+    border-top: 1px solid rgba(218, 220, 223, 0.877);
+    height: 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:10px ;
+
+}
+
+.due{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.tag{
+    background-color: #D3E5EF;
+    white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  width : 130px;
+  height: 30px
+
+}
+svg{
+    margin-bottom: 2px;
+    color: #314B5D;
+}
+
+.toggle svg{
+    color : #3B3C3C;
+    cursor: pointer;
+    border-radius: 8px;
+    /* padding: 0 2px 0 3px; */
+    margin: 0 5px;
+
+}
+.toggle span{
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.toggle span:hover{
+    background-color: #E6E6E6;
+    color : #242525;
+    
+}
+
+
+.circle{
+    width: 25px;
+    height: 25px;
+    background-color: #e1e3e3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    
+}
+ .task-card:hover .circle{
+    opacity: 100%;
+} 
+
+
+svg{
+    margin: 1px;
+}

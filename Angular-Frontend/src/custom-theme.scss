@@ -1,0 +1,100 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $projetFrameworkRT4-Angular-primary: mat.define-palette(mat.$indigo-palette);
+
+$mat-theme-primary-palette: map-merge(mat.$indigo-palette, (
+  401: #6762c0, contrast: (401: white,A100: white,A200: white,)
+));
+$projetFrameworkRT4-Angular-primary: mat.define-palette(
+  $mat-theme-primary-palette,
+
+  $default: 401,
+  $lighter: A100,
+  $darker: A200,
+  $text: 600
+
+);
+
+$mat-theme-accent-palette: map-merge(mat.$pink-palette, ( 501: #A22042,contrast: (501: white,A100: white,A200: white,)));
+$projetFrameworkRT4-Angular-accent: mat.define-palette(
+  $mat-theme-accent-palette,
+  $default: 501,
+  $lighter: A100,
+  $darker: A200,
+  $text: 600
+);
+
+// The warn palette is optional (defaults to red).
+$projetFrameworkRT4-Angular-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$projetFrameworkRT4-Angular-theme: mat.define-light-theme((
+  color: (
+    primary: $projetFrameworkRT4-Angular-primary,
+    accent: $projetFrameworkRT4-Angular-accent,
+    warn: $projetFrameworkRT4-Angular-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($projetFrameworkRT4-Angular-theme);
+
+.my-special-section {
+
+  $mat-special-primary-palette : map-merge(mat.$indigo-palette, (
+    601: #74b57f, contrast: (
+      601: white,
+      A100: white,
+      A200: white,)
+  ));
+  $special-primary: mat.define-palette(
+    $mat-special-primary-palette,
+    $default: 601,
+    $lighter: A100,
+    $darker: A200,
+    $text: 600
+  
+  );
+  $special-accent: mat.define-palette(mat.$brown-palette);
+  $special-theme: mat.define-dark-theme((
+    color: (primary: $special-primary, accent: $special-accent),
+  ));
+ 
+  @include mat.checkbox-color($special-theme);
+
+  .mat-mdc-checkbox {
+    --mdc-form-field-label-text-color: #444545;
+    --mdc-checkbox-state-layer-size: 50px;
+  }
+
+ 
+
+  .mat-mdc-checkbox.mat-primary{
+    --mdc-checkbox-unselected-focus-state-layer-color: rgb(79 101 182 / 54%);
+    --mdc-checkbox-unselected-icon-color: rgba(79, 101, 182, 0.80);
+    --mdc-checkbox-unselected-focus-icon-color: rgba(79, 101, 182, 0.697);
+    --mdc-checkbox-unselected-hover-icon-color: #50965c;
+    --mdc-checkbox-unselected-hover-state-layer-color: #50965c;
+    --mdc-checkbox-unselected-pressed-state-layer-color: rgba(79, 101, 182, 0.577);
+    --mdc-checkbox-unselected-pressed-icon-color: rgba(79, 101, 182, 0.54);
+
+  }
+
+   
+ }
+

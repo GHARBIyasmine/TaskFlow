@@ -1,0 +1,40 @@
+<div mat-dialog-header class="dialog-header">
+    <div class="title"><h4> Edit Task</h4></div>
+    <button type="button" class="close-button" (click)="close()">
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30" height="37" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+         </svg>
+ </button>
+ </div>
+ 
+ <div mat-dialog-content class="content" >
+     <img src="assets/svg/Loading.svg" >
+   <form #joinForm="ngForm" (ngSubmit)="submitForm(joinForm)" class="form-container">
+     <mat-form-field appearance="outline" class="form-group">
+       <mat-label for="inputField">Edit task :</mat-label>
+       <input
+         matInput
+         type="text"
+         id="inputField"
+         name="inputField"
+         [(ngModel)]="formData.name"
+         #inputField="ngModel"
+         required
+         minlength="4"
+         maxlength="40"
+       />
+       
+       <mat-error *ngIf="inputField.invalid && inputField.touched && inputField.errors?.['required']">Input is required.</mat-error>
+       <mat-error *ngIf="inputField.invalid && inputField.dirty && inputField.errors?.['minlength']">
+         Input must be at least 4 characters.
+       </mat-error>
+       <mat-error *ngIf="inputField.invalid && inputField.dirty && inputField.errors?.['maxlength']">
+        Input must not be more than 40 characters.
+      </mat-error>
+     </mat-form-field>
+ 
+     <button mat-raised-button color="primary" [disabled]="joinForm.invalid" class="submit-btn">Submit</button>
+   </form>
+ </div>
+ 
+
