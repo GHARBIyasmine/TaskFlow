@@ -41,7 +41,6 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ReactiveFormsModule} from "@angular/forms";
 
 
-import { environment } from 'src/environement';
 
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
@@ -125,16 +124,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatDialogModule,
     MatProgressSpinnerModule,
     
-    // BreadcrumbModule,
-    BreadcrumbComponent, BreadcrumbItemDirective,
-
+    
     MatCardModule,
     
 
-    // firebase imports 
-    // provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    // provideStorage(() => getStorage()),
-
+    
     
 
   ],
