@@ -4,9 +4,9 @@
 
 
   export const conf = {  
-    Backend_API : 'http://localhost:8000',
-    ACCESS_TOKEN_KEY: 'RT4_Project_KEY',
-    REFRESH_TOKEN_KEY: 'Refresh_KEY'
+    Backend_API : 'http://django-service:8000',
+    ACCESS_TOKEN_KEY: 'ACCESS_KEY',
+    REFRESH_TOKEN_KEY: 'REFRESH_KEY'
   }; 
 
   /*

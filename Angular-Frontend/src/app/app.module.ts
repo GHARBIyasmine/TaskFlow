@@ -50,7 +50,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RegisterViewComponent } from './view/auth-view/register-view/register-view.component';
 import { LoginViewComponent } from './view/auth-view/login-view/login-view.component';
 
-import { BreadcrumbComponent, BreadcrumbItemDirective } from 'xng-breadcrumb';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
